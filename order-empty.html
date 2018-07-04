@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="content-gray">
+<div class="page-group">
+    <header>
+        <a href="javascript:history.go(-1)" class="pull-left ico icon-left"></a>
+        <h1 class="header-title">我的订单</h1>
+    </header>
+    <div class="content">
+        <div class="order-nav">
+            <ul class="order-nav-bar">
+                <li class="order-nav-item active"><a href="order.html">全部</a></li>
+                <li class="order-nav-item"><a href="order-pending-payment.html">待付款</a></li>
+                <li class="order-nav-item"><a href="order-pending-delivery.html">待发货</a></li>
+                <li class="order-nav-item"><a href="order-pending-receive.html">待收货</a></li>
+                <li class="order-nav-item"><a href="order-computed.html">已完成</a></li>
+            </ul>
+        </div>
+        <!--无订单-->
+        <div class="order-empty">
+            <div class="order-empty-img">
+                <img src="./images/order-empry.png" alt="">
+            </div>
+            <p>暂无等待付款的订单!</p>
+        </div>
+
+
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+
+</html>

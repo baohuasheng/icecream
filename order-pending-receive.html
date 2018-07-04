@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="plugins/swiper/swiper.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="content-gray">
+<div class="page-group">
+    <header>
+        <a href="javascript:history.go(-1)" class="pull-left ico icon-left"></a>
+        <h1 class="header-title">我的订单</h1>
+    </header>
+    <div class="content">
+        <div class="order-nav">
+            <ul class="order-nav-bar">
+                <li class="order-nav-item"><a href="order.html">全部</a></li>
+                <li class="order-nav-item"><a href="order-pending-payment.html">待付款</a></li>
+                <li class="order-nav-item"><a href="order-pending-delivery.html">待发货</a></li>
+                <li class="order-nav-item active"><a href="order-pending-receive.html">待收货</a></li>
+                <li class="order-nav-item"><a href="order-computed.html">已完成</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="order-list">
+                <div class="order-list-time padding-30">
+                    <p>下单时间：2017/12/10<span>19:36</span></p>
+                    <p class="order-status-wait">等待收货</p>
+                </div>
+                <div class="order-list-info single">
+                    <div class="classification-commodity-list-li">
+                        <a href="">
+                            <div class="classification-commodity-list-img">
+                                <img src="images/commodity.jpg">
+                            </div>
+                        </a>
+                        <div class="classification-commodity-list-info">
+                            <a href="#">
+                                <div class="classification-commodity-list-info-top">
+                                    <div class="classification-commodity-list-info-left">
+                                        <p class="classification-commodity-list-info-name">哈根达斯冰淇淋哈根达斯冰淇淋哈根达斯冰淇淋哈根达斯冰淇淋哈根达斯冰淇淋</p>
+                                        <p class="order-list-info-attr">1L 白色</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="classification-commodity-list-info-down">
+                                <div class="classification-commodity-list-info-sell">
+                                    <p class="price">
+                                        <span class="present-price">¥99.90</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-total padding-30">
+                    <p>共10件商品</p>
+                    <p class="order-total-price">实付款¥99.90</p>
+                </div>
+                <div class="order-act">
+                    <a href="order-detail-receive.html" class="btn-danger">确认收货</a>
+                </div>
+            </div>
+            <div class="order-list">
+                <div class="order-list-time padding-30">
+                    <p>下单时间：2017/12/10<span>19:36</span></p>
+                    <p class="order-status-wait">等待收货</p>
+                </div>
+                <div class="order-list-info multiple">
+                    <!-- Swiper -->
+                    <div class="swiper-container multiple-product">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/commodity.jpg"></div>
+                            <div class="swiper-slide"><img src="images/commodity.jpg"></div>
+                            <div class="swiper-slide"><img src="images/commodity.jpg"></div>
+                            <div class="swiper-slide"><img src="images/commodity.jpg"></div>
+                            <div class="swiper-slide"><img src="images/commodity.jpg"></div>
+                            <div class="swiper-slide"><img src="images/commodity.jpg"></div>
+                            <div class="swiper-slide"><img src="images/commodity.jpg"></div>
+                            <div class="swiper-slide"><img src="images/commodity.jpg"></div>
+                            <div class="swiper-slide"><img src="images/commodity.jpg"></div>
+                            <div class="swiper-slide"><img src="images/commodity.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-total padding-30">
+                    <p>共10件商品</p>
+                    <p class="order-total-price">实付款¥99.90</p>
+                </div>
+                <div class="order-act">
+                    <a href="order-detail-receive.html" class="btn-danger">确认收货</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="plugins/swiper/swiper.min.js"></script>
+<script>
+   $(document).ready(function () {
+       var swiper = new Swiper('.multiple-product', {
+           slidesPerView: 3.3329,
+           spaceBetween: 5,
+
+       });
+   })
+</script>
+</html>

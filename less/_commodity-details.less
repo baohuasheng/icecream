@@ -1,0 +1,83 @@
+.commodity-details{
+  padding: 28px 30px 0 30px;
+  .swiper-container{
+    img{
+      width: 100%;
+    }
+    .commodity-collection{
+      position: absolute;
+      top: 18px;
+      right: 21px;
+      font-size: 45px;
+      z-index: 100;
+    }
+  }
+  .commodity-details-info{
+    margin-top: 32px;
+    overflow: hidden;
+    .commodity-details-name{
+      font-size: 32px;
+      color: #000;
+    }
+    .commodity-details-flavor{
+      font-size: 26.5px;
+      color: #3f3f3f;
+      margin-top: 30px;
+    }
+    .commodity-details-weight{
+      font-size: 26.5px;
+      color: #3f3f3f;
+      margin-top: 13px;
+    }
+    .commodity-details-sold{
+      font-size: 24px;
+      color: #3f3f3f;
+      margin-top: 60px;
+    }
+    .commodity-details-price{
+      overflow: hidden;
+      margin-top: 15px;
+      .commodity-details-present-price{
+        font-size: 26.5px;
+        color: #ff0000;
+        float: left;
+      }
+      .commodity-details-original-price{
+        color: #9f9f9f;
+        float: left;
+        margin-left: 37px;
+        font-size: 24px;
+        span:nth-child(2){
+          text-decoration:line-through;
+        }
+      }
+    }
+    .commodity-details-brief{
+      margin-top: 60px;
+      font-size: 18px;
+      color: #565656;
+    }
+  }
+}
+.commodity-details-add-cart{
+  width: 30%;
+  span{
+    padding-left: 32px;
+    border-left: 1px solid #e8e8e8;/*no*/
+    font-size: 28px;
+    color: #ff0000;
+  }
+}
+.commodity-collection:before{
+  color: #fff;
+}
+.commodity-collection-success{
+  position: absolute;
+  top: 0.45rem;
+  right: 0.525rem;
+  font-size: 1.125rem;
+  z-index: 100;
+}
+.commodity-collection-success:before{
+  color: #fd5105;
+}

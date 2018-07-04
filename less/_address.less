@@ -1,0 +1,110 @@
+.add-address{
+	.bind-list{
+		background: #fff;
+	}
+	.textarea-wrap{
+		height: auto;
+		textarea{
+		width: 100%;
+		font-size: 0.75rem;
+    	color: #656565;
+    	line-height: normal;
+    	border: none;
+    	resize:none;
+    	padding: 36px 0;
+		}
+		input{
+			width: auto;
+			height: auto;
+			margin-right: 20px;
+		}
+		p{
+			font-size: 34px;
+			color: #656565;
+		}
+	}
+	.introduce-address{
+	width: 100%;
+	font-size: 34px;
+	color: #000;
+}
+}
+.add-address-button{
+		width: 100%;
+		position: fixed;
+		bottom: 60px;
+		.icon-plus1{
+			position: relative;
+			top: 2px;
+		}
+	}
+.margin-top16{
+	margin-top: 16px;
+}
+
+
+
+.select-address-list{
+	background: #fff;
+	overflow: hidden;
+	li{
+		.flex();
+		padding: 20px 30px;
+		.border-bottom();
+	}
+}
+.address-item{
+	width: 100%;
+	.address-item-info{
+		font-size: 28px;
+		color: #656565;
+		line-height: 60px;
+	}
+	.address-item-address{
+		font-size: 34px;
+		color: #010101;
+		line-height: 60px;
+		span{
+			color: #ff0000;
+		}
+	}
+}
+.address-item ~ .checkbox-label{
+	margin-left: 10px;
+}
+.checkbox-label{
+	input[type="checkbox"],input[type="radio"]{
+		position: absolute;
+		visibility: hidden;
+	}
+	input[type="checkbox"],input[type="radio"]{
+		& + .icon-no-selected{
+			font-size: 50px;
+			color: #adadad;
+		}
+		& + .icon-no-selected + .icon-selected1{
+			display: none;
+		}
+	}
+	input[type="checkbox"]:checked,input[type="radio"]:checked{
+		& + .icon-no-selected{
+			display: none;
+		}
+		& + .icon-no-selected + .icon-selected1{
+			display: block;
+			font-size: 50px;
+			color: #137efe;
+		}
+	}
+}
+.address-item-text{
+	font-size: 30px;
+	color: #656565;
+}
+.address-item-btn{
+	width: 184 * 2px;
+	button{
+		display: inline-block;
+		margin-left: 12px;
+	}
+	}

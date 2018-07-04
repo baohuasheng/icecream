@@ -1,0 +1,135 @@
+.banner{
+	height: 320px;
+	overflow: hidden;
+	.swiper-pagination{
+		bottom: 5px !important;
+	}
+	.swiper-pagination-bullet{
+		opacity: 1;
+		background: #cdc7be;
+		width: 16px;
+		height: 16px;
+		border-radius: 50% !important;
+	}
+	.swiper-pagination-bullet-active{
+		background: #fff;
+	}
+}
+.index-text{
+	.notice{
+		height: 80px;
+	}
+	margin: 20px;
+	font-size: 30px;
+	color: #fd5105;
+	font-weight: bold;
+	text-align: center;
+	p{
+		.ellipsis-basic;
+	}
+}
+.indedx-nav{
+	padding: 40px 30px 0px 30px;
+	.border-bottom();
+	.border-top();
+	.flex();
+	a{
+		width: 119px;
+		.icon-wrap{
+			border: 5px solid #7f7f7f;
+			font-size: 60px;
+			border-radius: 10px;
+			.m-imgCenter(119px,119px);
+		}
+		p{
+			text-align: center;
+			line-height: 84px;
+			font-size: 30px;
+			color: #7f7f7f;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		&.active{
+			.icon-wrap{
+				border-color: #000;
+				color: #000;
+			}
+			p{
+				color: #000;
+			}
+		}
+	}
+}
+.index-list{
+	overflow: hidden;
+}
+.index-list-sidebar{
+	width: 192px;
+	float: left;
+	border-right: 1px solid #e8e8e8;/*no*/
+	background: #fff;
+	overflow-y: scroll;
+	li{
+		padding: 0 30px;
+		a{
+			width: 140px;
+			display: inline-block;
+			text-align: center;
+			padding: 25px 0; 
+			font-size: 26px;
+			color: #242424;
+			.border-bottom();
+		}
+		&.active{
+			background: #fd5105;
+			position: relative;
+			&:after{
+				position: absolute;
+				top: 50%;
+				right: 0;
+				margin-top: -5px;
+				content: ' ';
+				.triangle-l(10px,#fff);
+			}
+			a{
+				color: #fff;
+				border: none;
+			}
+			}
+	}
+}
+.index-product-list{
+	margin-left: 192px;
+	min-height: 268px;
+	margin-right: 30px;
+	.classification-commodity-list-li{
+		padding: 34px 0 34px 10px;
+		.classification-commodity-list-info{
+			width: 60%;
+		}
+		.classification-commodity-list-img{
+			width: 190px;
+			height: 160px;
+		}
+		.classification-commodity-list-info-name{
+				font-size: 30px !important;
+			}
+		.classification-commodity-list-info-flavor{
+			font-size: 24px !important;
+		}
+		.classification-commodity-list-info-down{
+			margin-top: .5rem;
+		}
+		.present-price{
+			font-size: 24px !important;
+		}
+		.original-price{
+			font-size: 24px !important;
+		}
+	}
+}
+.fixed{
+	position: fixed;
+	top: 88px;
+	z-index: 99999;
+}

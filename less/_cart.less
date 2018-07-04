@@ -1,0 +1,123 @@
+.cart-list{
+  overflow: hidden;
+  margin-bottom: 240px;
+  li{
+    padding: 43px 30px;
+    border-bottom: 1px solid #9f9f9f;/*no*/
+    .flex();
+    .cart-choice{
+      margin-right: 17px;
+    }
+
+    .icon-no-selected{
+      font-size: 31px;
+      color: #aaa;
+    }
+    .icon-selected2{
+      font-size: 31px;
+      color: #565656;
+    }
+
+    .cart-list-info{
+      overflow: hidden;
+      .flex();
+      .cart-img{
+        .m-imgCenter(200px,200px)
+      }
+      .cart-list-main{
+        width: calc(~'100% - 230px');
+        .cart-list-name{
+          color: #000;
+          font-size: 32px;
+          .ellipsis-basic();
+        }
+        .cart-list-specifications{
+          color: #a3a3a3;
+          font-size: 24px;
+          margin-top: 24px;
+        }
+        .cart-list-bottom{
+          overflow: hidden;
+          .flex();
+          margin-top: 35px;
+          .cart-list-price{
+            font-size: 26.5px;
+            color: #ff0000;
+          }
+        }
+      }
+    }
+  }
+  .cart-list-tip{
+    font-size: 22px;
+    color: #a3a3a3;
+    margin: 25px 0 0 30px;
+  }
+}
+.cart-settlement{
+  .flex();
+  position: fixed;
+  width: 100%;
+  bottom: 98px;
+  height: 84px;
+  border: 1px solid #e8e8e8;/*no*/
+  padding-left: 30px;
+  background-color: #fff;
+  .cart-settlement-choice{
+    overflow: hidden;
+    .span{
+      font-size: 24px;
+      color: #565656;
+      line-height: 31px;
+      margin-left: 20px;
+      float: left;
+    }
+  }
+  .cart-settlement-total{
+    font-size: 24px;
+    color: #565656;
+    span{
+      color: #ff0000;
+      margin-left: 18px;
+    }
+  }
+  .cart-btn{
+    width: 260px;
+    height: 82px;
+    border: none;
+    color: #fff;
+  }
+  .cart-settlement-difference{
+    background-color: #aaa;
+  }
+  .cart-settlement-confirm{
+    background-color: #ff0000;
+  }
+}
+
+.cart-checkbox-label{
+  margin-right: 20px;
+  input[type="checkbox"],input[type="radio"]{
+    position: absolute;
+    visibility: hidden;
+  }
+  input[type="checkbox"],input[type="radio"]{
+    & + .icon-no-selected{
+      font-size: 32px;
+      color: #aaa;
+    }
+    & + .icon-no-selected + .icon-selected2{
+      display: none;
+    }
+  }
+  input[type="checkbox"]:checked,input[type="radio"]:checked{
+    & + .icon-no-selected{
+      display: none;
+    }
+    & + .icon-no-selected + .icon-selected2{
+      display: inline-block;
+      font-size: 32px;
+      color: #565656;
+    }
+  }
+}

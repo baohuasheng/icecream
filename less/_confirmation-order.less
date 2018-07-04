@@ -1,0 +1,178 @@
+.confirmation-order-add-address{
+  width: 100%;
+  height: 206px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 2px solid #dedde3;/*no*/
+  img{
+    width: 278px;
+    height: 80px;
+    left:50%;
+    position: absolute;
+    margin-left: -139px;
+    line-height: 206px;
+    margin-top: 60px;
+  }
+}
+.confirmation-order-division{
+  height: 34px;
+  width: 100%;
+  background-color: #efeff4;
+}
+.confirmation-order-commodity{
+  .flex();
+  border-bottom: 24px solid #efeff4;
+  padding: 43px 30px;
+  .confirmation-order-commodity-img{
+    .m-imgCenter(200px,200px);
+  }
+  .confirmation-order-commodity-info{
+    width: calc(~'100% - 230px');
+    overflow: hidden;
+    .confirmation-order-commodity-info-name{
+      color: #000;
+      font-size: 30px;
+      .ellipsis-basic();
+    }
+    .confirmation-order-commodity-info-specifications{
+      margin-top: 24px;
+      color: #a3a3a3;
+      font-size: 24px;
+    }
+    .confirmation-order-commodity-info-price{
+      overflow: hidden;
+      margin-top: 40px;
+      .price{
+        float: left;
+        font-size: 26px;
+        color: #ff0000;
+      }
+      .number{
+        float: right;
+        color: #dedde3;
+        font-size: 26px;
+      }
+    }
+  }
+}
+.confirmation-order-distribution{
+  overflow: hidden;
+  padding: 30px;
+  border-bottom: 8px solid #efeff4;
+  .mode{
+    float: left;
+    font-size: 28px;
+    color: #000;
+  }
+  .free-distribution{
+    float: right;
+    font-size: 28px;
+    color: #000;
+  }
+}
+.use-mibi{
+  overflow: hidden;
+  border-bottom: 6px solid #efeff4;
+  padding: 30px;
+  .use-mibi-name{
+    float: left;
+    font-size: 28px;
+    color: #000;
+  }
+  .use-mibi-switch{
+    float: right;
+  }
+}
+.buyer-message{
+  overflow: hidden;
+  padding: 30px;
+  border-bottom: 6px solid #efeff4;
+  .buyer-message-name{
+    float: left;
+    font-size: 28px;
+    color: #000;
+    width: 150px;
+  }
+  .buyer-message-input{
+    height: 50px;
+    width: calc(~'100% - 150px');
+  }
+}
+.confirmation-order-amount{
+  border-bottom: 60px solid #efeff4;
+  padding: 30px;
+  overflow: hidden;
+  margin-bottom: 86px;
+  .commodity-amount{
+    overflow: hidden;
+    border-bottom: 1px solid #dedde3;/*no*/
+    padding: 30px 0;
+    .commodity-amount-name{
+      font-size: 28px;
+      color: #000;
+      float: left;
+    }
+    .commodity-amount-payment{
+      font-size: 28px;
+      color: #000;
+      float: right;
+    }
+  }
+  .erect-reduction{
+    overflow: hidden;
+    padding: 30px 0;
+    .erect-reduction-name{
+      float: left;
+      font-size: 26px;
+      color: #656565;
+    }
+    .erect-reduction-payment{
+      float: right;
+      font-size: 26px;
+      color: #656565;
+    }
+  }
+  .mibi-payment{
+    overflow: hidden;
+    padding: 30px 0;
+    .mibi-payment-name{
+      float: left;
+      font-size: 26px;
+      color: #656565;
+    }
+    .mibi-payment-money{
+      float: right;
+      font-size: 26px;
+      color: #656565;
+    }
+  }
+}
+.immediate-payment{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 86px;
+  background-color: #fff;
+  .immediate-payment-main{
+    float: right;
+    .real-payment{
+      line-height: 88px;
+      font-size: 24px;
+      color: #565656;
+      float: left;
+      span{
+        color: #ff0000;
+      }
+    }
+    .immediate-payment-btn{
+      width: 235px;
+      height: 86px;
+      background-color: #ff0000;
+      color: #fff;
+      font-size: 28px;
+      margin-left: 40px;
+      border: none;
+    }
+  }
+}

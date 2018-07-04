@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="content-gray">
+    <div class="page-group">
+    <header>
+        <a href="javascript:history.go(-1)" class="pull-left ico icon-left"></a>
+        <h1 class="header-title">添加收货地址</h1>
+    </header>
+
+        <div class="content">
+            <div class="add-address">
+                <div class="bind-list padding-30">
+                    <input type="text" placeholder="请输入手机号">
+                </div>
+                <div class="bind-list padding-30">
+                    <input type="text" placeholder="请输入验证码">
+                </div>
+                <div class="bind-list padding-30">
+                        <div id="introduce-address" class="introduce-address">省、市、区</div>
+                        <i class="icon-right"></i>
+                        <input type="hidden" id="city" name="city" value="">
+                        <input type="hidden" id="province" name="province" value="">
+                        <input type="hidden" id="district" name="district" value="">
+                </div>
+                <div class="bind-list padding-30 textarea-wrap">
+                    <textarea rows="5"  placeholder="详细地址"></textarea>
+                </div>
+                <div class="padding-30 add-address-button">
+                    <button type="button" class="bind-button">保存并使用</button>
+                </div>
+            </div>
+            
+        
+        </div>
+    </div>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="plugins/distpicker/distpicker.min.js"></script>
+    <script type="text/javascript" src="plugins/picker/picker.min.js"></script>
+    <script type="text/javascript" src="plugins/picker/index.js"></script>
+</body>
+</html>

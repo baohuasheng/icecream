@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="page-group">
+    <header>
+        <a href="javascript:history.go(-1)" class="pull-left ico icon-left"></a>
+        <p class="header-title">确认订单</p>
+    </header>
+    <div class="content">
+        <a href="#">
+            <!--无地址-->
+            <div class="confirmation-order-add-address hide">
+                <img src="images/add-address.png">
+            </div>
+            <!--有地址-->
+            <div class="confirmation-order-default-address">
+                <div class="confirmation-order-address-info">
+                    <div class="confirmation-order-address-info-name">
+                        <i class="icon-location"></i>
+                        <p class="confirmation-order-address-info-consignee">张潇潇</p>
+                    </div>
+                    <p class="confirmation-order-address-info-tel">18712345678</p>
+                </div>
+                <p class="confirmation-order-default-address-main">收货地址：福建省福州市仓山区三江口清富棚户区三
+                    江路22号</p>
+            </div>
+        </a>
+        <div class="confirmation-order-division"></div>
+        <div class="confirmation-order-commodity">
+            <div class="confirmation-order-commodity-img">
+                <img src="images/commodity.jpg">
+            </div>
+            <div class="confirmation-order-commodity-info">
+                <p class="confirmation-order-commodity-info-name">[现榨现喝 轻便携带]Midea/...</p>
+                <p class="confirmation-order-commodity-info-specifications">1L 白色</p>
+                <div class="confirmation-order-commodity-info-price">
+                    <p class="price">¥99.90</p><p class="number">*10</p>
+                </div>
+            </div>
+        </div>
+        <div class="confirmation-order-distribution">
+            <p class="mode">配送方式</p>
+            <p class="free-distribution">订单满60商家免费配送</p>
+        </div>
+        <div class="use-mibi">
+            <p class="use-mibi-name">米币¥20.00</p>
+            <label class="label-switch use-mibi-switch">
+                <input class="hide" type="checkbox" checked="">
+                <div class="checkbox"></div>
+            </label>
+        </div>
+        <div class="buyer-message">
+            <p class="buyer-message-name">买家留言：</p>
+            <input class="buyer-message-input" placeholder="选填：对本次交易的说明">
+        </div>
+        <div class="confirmation-order-amount">
+            <div class="commodity-amount">
+                <p class="commodity-amount-name">商品金额</p>
+                <p class="commodity-amount-payment">¥99.90</p>
+            </div>
+            <div class="erect-reduction">
+                <p class="erect-reduction-name">首单立减</p>
+                <p class="erect-reduction-payment">-¥20.00</p>
+            </div>
+            <div class="mibi-payment">
+                <p class="mibi-payment-name">米币支付</p>
+                <p class="mibi-payment-money">-¥20.00</p>
+            </div>
+        </div>
+    </div>
+    <div class="immediate-payment">
+        <div class="immediate-payment-main">
+            <p class="real-payment">实付款： <span>¥99.90</span></p>
+            <button class="immediate-payment-btn">立即支付</button>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="plugins/layer_mobile/layer.js"></script>
+<script type="text/javascript" src="plugins/swiper/swiper.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+    })
+</script>
+</html>

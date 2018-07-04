@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="plugins/swiper/swiper.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="page-group">
+    <header>
+        <a href="javascript:history.go(-1)" class="icon-left ico pull-left"></a>
+        <p class="header-title">商品详情</p>
+    </header>
+    <footer>
+        <a href="cart.html">
+            <div class="icon-wrap"><i class="icon-shopping-cart"></i><span>5</span></div>
+            <span>购物车</span>
+        </a>
+        <a class="commodity-details-add-cart">
+            <span>加入购物车</span>
+        </a>
+    </footer>
+    <div class="content">
+        <div class="commodity-details">
+            <div class="swiper-container commodity-details-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href=""><img src="images/commodity-details.jpg"></a></div>
+                    <div class="swiper-slide"><a href=""><img src="images/commodity-details.jpg"></a></div>
+                    <div class="swiper-slide"><a href=""><img src="images/commodity-details.jpg"></a></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <i class="commodity-collection icon-collection1"></i>
+            </div>
+            <div class="commodity-details-info">
+                <p class="commodity-details-name">哈根达斯冰淇淋</p>
+                <p class="commodity-details-flavor">巧克力口味(单球冰淇淋丹麦筒二维码专卖)</p>
+                <p class="commodity-details-weight">80g</p>
+                <p class="commodity-details-sold"></p>
+                <div class="commodity-details-price">
+                    <p class="commodity-details-present-price">¥99.90</p>
+                    <p class="commodity-details-original-price"><span>原价</span><span>108.88</span></p>
+                </div>
+                <p class="commodity-details-brief">
+                    注意：大宗商品满5箱起送。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="plugins/layer_mobile/layer.js"></script>
+<script type="text/javascript" src="plugins/swiper/swiper.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var swiper = new Swiper('.commodity-details-swiper',{
+            autoplay: 3000,
+            loop : true,
+            pagination : '.swiper-pagination',
+            paginationClickable: true,
+        });
+        $(".commodity-details-add-cart").click(function(){
+            layer.open({
+                type: 1
+                ,content: '<div class="popup-cart-main">' +
+                '<div class="popup-cart-top"> ' +
+                '<div class="popup-cart-img m-imgCenter"> ' +
+                '<img src="images/commodity.jpg"> ' +
+                '</div> ' +
+                '<div class="popup-cart-price"> ' +
+                '<p class="popup-cart-price-present-price">¥99.90</p> ' +
+                '</div> ' +
+                '<p class="popup-cart-close">×</p> ' +
+                '<div class="clear"></div> ' +
+                '</div> ' +
+                '<p class="popup-cart-specifications">规格</p> ' +
+                '<div class="popup-cart-flavor-list"> ' +
+                '<p class="popup-cart-flavor">草莓口味</p> <p class="popup-cart-flavor">香草口味</p> <p class="popup-cart-flavor">蓝莓口味</p><p class="popup-cart-flavor">草莓口味</p> <p class="popup-cart-flavor">香草口味</p> <p class="popup-cart-flavor">蓝莓口味</p> ' +
+                '</div> ' +
+                '<div class="popup-cart-number"> ' +
+                '<p class="popup-cart-number-name">数量</p> ' +
+                '<div class="popup-cart-number-choice"> ' +
+                '<p class="popup-cart-number-choice-btn reduce">－</p><input value="1" data-min="1"  data-max="10" class="popup-cart-number-choice-input"><p class="popup-cart-number-choice-btn plus">＋</p> ' +
+                '</div> ' +
+                '</div> ' +
+                '<div class="popup-cart-btn-div">' +
+                '<button class="popup-cart-btn">确认</button> ' +
+                '</div>' +
+                '</div>'
+                ,anim: 'up popup-cart'
+            });
+        });
+        $("body").on("click",".popup-cart-close",function(){
+            layer.closeAll()
+        });
+        $(".commodity-collection").click(function(){
+            if($(this).hasClass("commodity-collection")){
+                $(this).addClass("commodity-collection-success").removeClass("commodity-collection")
+                layer.open({
+                    content: '收藏成功'
+                    ,skin: 'msg'
+                    ,time: 1 //2秒后自动关闭
+                });
+            }else {
+                $(this).removeClass("commodity-collection-success").addClass("commodity-collection")
+                layer.open({
+                    content: '取消收藏'
+                    ,skin: 'msg'
+                    ,time: 1 //2秒后自动关闭
+                });
+            }
+
+        });
+        // 选规格
+            $('body').on('click','.popup-cart-flavor',function () {
+               $(this).addClass('active').siblings().removeClass('active');
+            })
+            //减号
+            $("body").on('click','.reduce', function(){
+                var input = $(".popup-cart-number-choice-input");
+
+                var min = input.attr('data-min');
+
+                var value = input.val();
+                value--;
+                value = value >= min ? value : min;
+
+                input.val(value);
+
+            })
+
+            //加号
+            $("body").on('click','.plus', function(){
+
+                var input = $(".popup-cart-number-choice-input");
+
+                var max = input.attr('data-max');
+
+                var value = input.val();
+                value++;
+                value = value <= max ? value : max;
+
+                input.val(value);
+
+            })
+
+            $("body").on('input propertychange','.popup-cart-number-choice-input',function(){
+              var input = $(".popup-cart-number-choice-input");
+              var min = input.attr('data-min');
+              var max = input.attr('data-max');
+              var value = parseInt($(this).val().replace(/[^0-9]/ig,""));
+              if(value >= min ){
+                if(value <= max){
+                    $(this).val(value);
+                }else{
+                    $(this).val(max);
+                  }
+              }else{
+                $(this).val(min);
+              }
+              
+            });
+    });
+</script>
+</html>

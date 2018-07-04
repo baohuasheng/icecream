@@ -1,0 +1,28 @@
+
+.button(@w:100%,@bgc:#34afff,@h:80px,@fz:32px){
+    width: @w;
+    height: @h;
+    background-color:@bgc;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: @h;
+    border:none;
+    font-size: @fz;
+    display: block;
+}
+.btn-default{
+    .button(190px,#ffffff,60px,24px);
+    color: #bcbcbc;
+    border: 1px solid #bcbcbc;/*no*/
+    line-height: 58px;
+}
+.btn-danger{
+    .button(190px,#ff0000,60px,24px);
+}
+.btn-sm{
+    .button(@w:172px,@bgc:#34afff,@h:72px,@fz:32px);
+}
+.btn-default2{
+    background:#b2b2b2;
+}

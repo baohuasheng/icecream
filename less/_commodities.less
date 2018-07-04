@@ -1,0 +1,44 @@
+.commodities-screen{
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:space-around;
+  align-items:center;
+  border-top: 1px solid #ccc;/*no*/
+  border-bottom: 1px solid #ccc;/*no*/
+  a{
+    width: 25%;
+    border-left:1px solid #ccc;/*no*/
+    line-height: 87px;
+    display: block;
+    text-align: center;
+    color: #656565;
+    font-size: 28px;
+    position: relative;
+    i{
+      font-size: 10px;
+      position: absolute;
+      top: 40px;
+      left: 70%;
+      color: #747474;
+    }
+    i:first-child{
+      top: 20px;
+    }
+    .sort{
+      color: #000;
+    }
+  }
+  a:first-child{
+    border-left: none;
+  }
+  .active{
+    color: #fd5105;
+  }
+
+}
+.classification-commodity-list{
+  overflow: hidden;
+  padding: 0 30px;
+}

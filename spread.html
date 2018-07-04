@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="page-group">
+    <header>
+        <a href="javascript:history.go(-1)" class="pull-left ico icon-left"></a>
+        <h1 class="header-title">我要推广</h1>
+        <a href="spread-histroy.html" class="pull-right ico right-txt">历史</a>
+    </header>
+    <div class="content content-padding">
+        <div class="spread-code">
+            <img src="./images/spread-code.jpg" alt="">
+        </div>
+        <p class="spread-txt spread-title">扫描二维码，开启冰雪王国之旅！</p>
+        <div class="spread-rule">
+            <p class="spread-txt">规则说明：</p>
+            <p class="spread-txt spread-rule-content">只要是从你的二维码或分享出去的朋友圈链接下的订单，都是你的提成客户，分享越多，提成就越多。赶紧转发朋友圈吧！</p>
+        </div>
+        <div class="spread-btn">
+            <a class="spread-btn-forward" id="share_btn">立即转发</a>
+            <a href="share.html" class="spread-btn-share">打开分享页面</a>
+        </div>
+    </div>
+</div>
+<div id="shareit">
+    <img class="arrow" src="images/share-it.png">
+    <a href="#" id="follow">
+        <p class="shareit-p">点击右上角分享</p>
+    </a>
+</div>
+
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#share_btn").on("click", function() {
+            $("#shareit").show();
+        });
+
+
+        $("#shareit").on("click", function(){
+            $("#shareit").hide();
+        })
+    })
+</script>
+</html>
